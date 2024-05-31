@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
 # Basic Route
 @app.route('/')
 def index():
-    return "<h1> Hello there</h1>"
+    return render_template('basic.html')
 
 #Dynamic Routes
 @app.route('/puppy/<name>')
